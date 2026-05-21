@@ -93,37 +93,24 @@
     </div>
 
 <script>
-      // The absolute standard SHA-256 hash for "kctec-privacy"
-      const PASSWORD_HASH = "faeef49b499119159931b674828da1b9804e17db912be216259024f944d67362";
+      // This is the encoded string for "kctec030326"
+      const ENCODED_PASSWORD = "a2N0ZWMwMzAzMjY=";
 
-      // Robust SHA-256 hashing function compatible with local and cloud environments
-      async function sha256(string) {
-        const utf8 = new TextEncoder().encode(string);
-        const hashBuffer = await crypto.subtle.digest('SHA-256', utf8);
-        
-        // Using a DataView is the safest way to prevent local machine byte-parsing issues
-        const hashArray = new Uint8Array(hashBuffer);
-        let hashHex = '';
-        for (let i = 0; i < hashArray.length; i++) {
-          const hex = hashArray[i].toString(16);
-          hashHex += (hex.length === 1 ? '0' + hex : hex);
-        }
-        return hashHex;
-      }
-
-      async function verifyPassword() {
+      function verifyPassword() {
         const input = document.getElementById('password-input').value;
-        const inputHash = await sha256(input);
+        
+        // Safely encode the user's input to Base64
+        const inputEncoded = btoa(input);
         const errorDiv = document.getElementById('error-message');
 
-        if (inputHash === PASSWORD_HASH) {
+        if (inputEncoded === ENCODED_PASSWORD) {
           // Hide login screen
           document.getElementById('privacy-lock').style.display = 'none';
           
-          // Initialise Nuxt configurations context
+          // Initialize Nuxt configurations context
           window.__NUXT__ = { config: { _app: { basePath: "/", assetsPath: "./", cdnURL: null } } };
           
-          // Dynamically load dependencies in order only after successful login
+          // Dynamically load dependencies in order
           const scripts = ["./data.js", "./config.js", "./translate.js", "./e8cd43a.js", "./a865292.js", "./8e0b1c0.js", "./1b3c704.js"];
           
           loadScriptsSequentially(scripts);
@@ -137,7 +124,7 @@
         const src = scriptArray.shift();
         const script = document.createElement('script');
         script.src = src;
-        script.async = false; // Preserves sequential loading order 
+        script.async = false; 
         script.onload = function() {
           loadScriptsSequentially(scriptArray);
         };

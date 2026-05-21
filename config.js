@@ -5,7 +5,7 @@ var CONFIG = {
   "boxHeight": 50,
   "title": {
     "color": "#05668d",
-    "text": "KCTEC organization chart"
+    "text": "KCTEC Organization Chart 2026"
   },
   "information": "Do you see something wrong? Please drop a <em>mail</em> to <a href=\"mailto:kak.ratana@gmail.com?Subject=Hello%20again\" target=\"_top\">someone@example.com</a>",
   "photoUrl": {

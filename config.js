@@ -7,7 +7,7 @@ var CONFIG = {
     "color": "#05668d",
     "text": "KCTEC organization chart"
   },
-  "information": "Do you see something wrong? Please drop a <em>mail</em> to <a href=\"mailto:someone@example.com?Subject=Hello%20again\" target=\"_top\">someone@example.com</a>",
+  "information": "Do you see something wrong? Please drop a <em>mail</em> to <a href=\"mailto:kak.ratana@gmail.com?Subject=Hello%20again\" target=\"_top\">someone@example.com</a>",
   "photoUrl": {
     "prefix": "photos/",
     "suffix": ".jpg"

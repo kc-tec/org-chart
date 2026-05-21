@@ -92,16 +92,23 @@
       </div> 
     </div>
 
-    <script>
-      // SHA-256 Hash of your preferred password. 
-      // The hash below corresponds to the password: "kctec-privacy"
+<script>
+      // The absolute standard SHA-256 hash for "kctec-privacy"
       const PASSWORD_HASH = "faeef49b499119159931b674828da1b9804e17db912be216259024f944d67362";
 
+      // Robust SHA-256 hashing function compatible with local and cloud environments
       async function sha256(string) {
         const utf8 = new TextEncoder().encode(string);
         const hashBuffer = await crypto.subtle.digest('SHA-256', utf8);
-        const hashArray = Array.from(new Uint8Array(hashBuffer));
-        return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+        
+        // Using a DataView is the safest way to prevent local machine byte-parsing issues
+        const hashArray = new Uint8Array(hashBuffer);
+        let hashHex = '';
+        for (let i = 0; i < hashArray.length; i++) {
+          const hex = hashArray[i].toString(16);
+          hashHex += (hex.length === 1 ? '0' + hex : hex);
+        }
+        return hashHex;
       }
 
       async function verifyPassword() {

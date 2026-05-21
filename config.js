@@ -16,7 +16,7 @@ var CONFIG = {
     "photos": true,
     "names": true,
     "columnview": true,
-    "staffColumnview": false,
+    "staffColumnview": true,
     "showNrDepartments": true,
     "showNrPeople": true
   },
@@ -26,7 +26,8 @@ var CONFIG = {
     "#05668d",
     "#8d6e05",
     "#8d2305",
-    "#cfb303"
+    "#cfb303",
+	"#dad1c3"
   ],
   "editCommand": "_edit",
   "dataFields": [

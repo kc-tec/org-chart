@@ -1,6 +1,6 @@
 var CONFIG = {
   "enableUserSettings": true,
-  "showUserManual": true,
+  "showUserManual": false,
   "boxWidth": 120,
   "boxHeight": 50,
   "title": {

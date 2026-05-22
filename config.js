@@ -15,7 +15,7 @@ var CONFIG = {
   "startView": {
     "photos": true,
     "names": true,
-    "columnview": false,
+    "columnview": true,
     "staffColumnview": true,
     "showNrDepartments": true,
     "showNrPeople": true

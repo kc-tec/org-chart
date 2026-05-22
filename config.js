@@ -1,7 +1,7 @@
 var CONFIG = {
-  "enableUserSettings": true,
+  "enableUserSettings": false,
   "showUserManual": false,
-  "boxWidth": 120,
+  "boxWidth": 200,
   "boxHeight": 50,
   "title": {
     "color": "#05668d",

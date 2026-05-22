@@ -8,6 +8,20 @@
     <title>Organization chart</title>
     <link data-n-head="1" rel="icon" type="image/x-icon" href="./favicon.ico">
     <style>
+			/* Change the size of the search input field */
+		.v-text-field .v-input__control .v-input__slot input,
+		input[type="text"] {
+			width: 250px !important;      /* Changes the width (Default is usually smaller) */
+			height: 40px !important;     /* Changes the height */
+			font-size: 16px !important;  /* Changes the text size inside the search input */
+			padding: 8px 12px !important;/* Adjusts inner spacing */
+		}
+
+		/* Optional: Adjust the outer container sizing if needed */
+		.v-input.v-text-field {
+			max-width: 300px !important; 
+		}
+	
       #__nuxt, body, html { background: #fff; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; margin: 0; padding: 0; font-family: sans-serif; }
       
       /* Login Overlay Styles */

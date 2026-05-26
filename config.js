@@ -4,7 +4,8 @@ var CONFIG = {
   "boxWidth": 200,
   "boxHeight": 50,
   "title": {
-    "color": "#05668d",
+    "color": "#0068ce",
+	"background-color": "#0068ce",
    "text": "KCTEC"
   },
   "information": "Do you see something wrong? Please drop a <em>mail</em> to <a href=\"mailto:kak.ratana@gmail.com?Subject=Hello%20again\" target=\"_top\">kak.ratana@gmail.com</a>",
